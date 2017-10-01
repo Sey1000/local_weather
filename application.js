@@ -1,4 +1,3 @@
-var api_key = config.API_KEY;
 var xhr = new XMLHttpRequest();
 xhr.open('GET', "https://ipinfo.io/json", true);
 xhr.send();
