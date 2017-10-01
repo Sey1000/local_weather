@@ -1,3 +1,4 @@
+var api_key = config.API_KEY;
 var xhr = new XMLHttpRequest();
 xhr.open('GET', "https://ipinfo.io/json", true);
 xhr.send();
@@ -13,7 +14,7 @@ function processRequest(e) {
 }
 
 function requestWeather(coord) {
-  var weatherUrl = "https://api.openweathermap.org/data/2.5/weather?lat=" + coord[0] + "&lon=" + coord[1] + "&APPID=efddbb03e13590ab0d1995b27a3dd606";
+  var weatherUrl = "https://api.openweathermap.org/data/2.5/weather?lat=" + coord[0] + "&lon=" + coord[1] + "&APPID=" + api_key;
   var weatherXhr = new XMLHttpRequest();
   weatherXhr.open('GET', weatherUrl, true);
   weatherXhr.send()
